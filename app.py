@@ -1,5 +1,3 @@
-from dotenv import load_dotenv
-import os
 import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
@@ -9,7 +7,7 @@ from langchain.chains.question_answering import load_qa_chain
 
 def generate_flashcards(text,Apikey, num_cards):
     # Create a prompt for flashcard generation
-    flashcard_prompt = f"""Generate {num_cards} flashcards from the following text. 
+    flashcard_prompt = f"""Generate {num_cards} flashcards from the following text in such a way that the flashcards should be able to explain the complete concept in depth and detailed manner and also imrpve the user learning. 
     Format each flashcard as 'Q: <question> | A: <answer>':
     {text}"""
     
@@ -25,7 +23,7 @@ def generate_flashcards(text,Apikey, num_cards):
     return flashcards
 
 def main():
-    load_dotenv()
+    
     st.set_page_config(page_title="PDF Flashcards Generator")
     st.sidebar.header("PDF FLASHCARDS")
     
@@ -86,6 +84,7 @@ def main():
 
                 chain = load_qa_chain(llm, chain_type="stuff")
                 res = chain.run(input_documents=docs, question=user_Q)
+                
                 st.write("USER👨:", user_Q)
                 st.write("CHAD🤖:", res)
     else:

@@ -5,7 +5,11 @@ __pycache__/
 
 # C extensions
 *.so
+<<<<<<< HEAD
 
+=======
+!requirements.txt
+>>>>>>> 659bc6f862d3d09736ccb7de0b351b01d0ce32ec
 # Distribution / packaging
 .Python
 build/
@@ -172,6 +176,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+<<<<<<< HEAD
 
 # Cursor
 #  Cursor is an AI-powered code editor. `.cursorignore` specifies files/directories to
@@ -179,3 +184,5 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+=======
+>>>>>>> 659bc6f862d3d09736ccb7de0b351b01d0ce32ec

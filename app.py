@@ -144,6 +144,28 @@ def generate_practice_quiz(text, Apikey, num_questions=5):
     response = llm.invoke(prompt + text)
     return response.content
 
+def generate_flashcards(text, Apikey, num_cards):
+    prompt = f"""Generate {num_cards} flashcards from the following text.
+    Format each flashcard as:
+    Q: <question>|A: <answer>
+    
+    Make sure each card tests understanding of key concepts.
+    Text: {text}"""
+    
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-2.0-flash",
+        google_api_key=Apikey,
+        temperature=0.7
+    )
+    try:
+        response = llm.invoke(prompt)
+        # Split the response into individual flashcards
+        cards = [card.strip() for card in response.content.split('\n') if card.strip()]
+        return cards
+    except Exception as e:
+        st.error(f"Error generating flashcards: {str(e)}")
+        return []
+
 def main():
     st.set_page_config(page_title="AI Study Companion", layout="wide")
     

@@ -1,4 +1,4 @@
-# AI Study Companion 📚
+# EasyLearn AI Study Companion 📚
 
 AI Study Companion is an interactive learning tool that helps students and professionals study more effectively by leveraging AI to generate study materials, practice quizzes, and conduct mock interviews.
 
@@ -45,7 +45,7 @@ AI Study Companion is an interactive learning tool that helps students and profe
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/ai-study-companion.git
+git clone https://github.com/Shivaraj-Kolekar/EasyLearn-AI.git
 cd ai-study-companion
 ```
 

@@ -2,6 +2,9 @@
 
 AI Study Companion is an interactive learning tool that helps students and professionals study more effectively by leveraging AI to generate study materials, practice quizzes, and conduct mock interviews.
 
+![Screenshot 2025-05-23 200612](https://github.com/user-attachments/assets/024788fb-a037-4550-a2e1-d57b2149184b)
+
+
 ## Features 🌟
 
 - **📖 Study Material Generation**
